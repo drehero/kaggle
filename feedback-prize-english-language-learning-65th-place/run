@@ -1,0 +1,21 @@
+#!/bin/bash
+
+python3 train.py \
+    --debug=True \
+    --in-path=data \
+    --out-path=out \
+    --wandb=True \
+    --pretrain=True \
+    --multi-scale=False \
+    --essay-level-feats=False \
+    --token-level-feats=False \
+    --bertadam=False \
+    --llrd=False \
+    --reinit-layers=0 \
+    --pooling=mean \
+    --loss=l1 \
+    --scale-targets=False \
+    --model=microsoft/deberta-v3-base \
+    --folds=4 \
+    --epochs=4 \
+    --batch-size=8 \
